@@ -1,6 +1,7 @@
 package balbucio.discordoauth;
 
 import balbucio.discordoauth.model.Connection;
+import balbucio.discordoauth.model.GroupChannel;
 import balbucio.discordoauth.model.Guild;
 import balbucio.discordoauth.model.User;
 import com.google.gson.Gson;
@@ -40,7 +41,7 @@ public class DiscordAPI
     {
         request.header("Authorization", "Bearer " + accessToken);
         request.header("User-Agent",
-            String.format("Mokulu-Discord-OAuth2-Java, version %s, platform %s %s", getVersion(), System.getProperty("os.name"),
+            String.format("Discord-OAuth2-Java, version %s, platform %s %s", getVersion(), System.getProperty("os.name"),
                 System.getProperty("os.version")));
     }
 
@@ -74,6 +75,18 @@ public class DiscordAPI
                 .requestBody(new JSONObject().put("access_token", accessToken).toString())
                 .ignoreContentType(true);
         request.header("Authorization", "Bot " + botToken);
+        request.method(org.jsoup.Connection.Method.POST);
+        int s = request.execute().statusCode();
+        return s == 201 || s == 204;
+    }
+
+    public boolean joinGroup(GroupChannel channel, User user) throws IOException{
+        org.jsoup.Connection request = Jsoup.connect(BASE_URI+"/channels/{channel.id}/recipients/{user.id}"
+                        .replace("{channel.id}", channel.getID())
+                        .replace("{user.id}", user.getId()))
+                .requestBody(new JSONObject().put("access_token", accessToken).toString())
+                .ignoreContentType(true);
+        setHeaders(request);
         request.method(org.jsoup.Connection.Method.POST);
         int s = request.execute().statusCode();
         return s == 201 || s == 204;
