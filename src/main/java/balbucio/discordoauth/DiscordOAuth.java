@@ -2,7 +2,7 @@ package balbucio.discordoauth;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.mokulu.discord.oauth.model.TokensResponse;
+import balbucio.discordoauth.model.TokensResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.utils.URIBuilder;
@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.List;
 
-import static io.mokulu.discord.oauth.DiscordAPI.BASE_URI;
+import static balbucio.discordoauth.DiscordAPI.BASE_URI;
 
 @Slf4j
 @RequiredArgsConstructor

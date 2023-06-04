@@ -1,10 +1,10 @@
 package balbucio.discordoauth;
 
+import balbucio.discordoauth.model.Connection;
+import balbucio.discordoauth.model.Guild;
+import balbucio.discordoauth.model.User;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.mokulu.discord.oauth.model.Connection;
-import io.mokulu.discord.oauth.model.Guild;
-import io.mokulu.discord.oauth.model.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
