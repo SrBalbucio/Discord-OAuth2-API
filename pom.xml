@@ -6,7 +6,7 @@
 
     <groupId>balbucio.discordoauth</groupId>
     <artifactId>discord-oauth2-api</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
