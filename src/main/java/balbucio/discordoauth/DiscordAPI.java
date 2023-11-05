@@ -18,7 +18,7 @@ import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
-public class DiscordAPI
+public class  DiscordAPI
 {
     public static final String BASE_URI = "https://discord.com/api";
     private static final Gson gson = new GsonBuilder().serializeNulls().enableComplexMapKeySerialization().create();
@@ -75,7 +75,7 @@ public class DiscordAPI
                 .requestBody(new JSONObject().put("access_token", accessToken).toString())
                 .ignoreContentType(true);
         request.header("Authorization", "Bot " + botToken);
-        request.method(org.jsoup.Connection.Method.POST);
+        request.method(org.jsoup.Connection.Method.PUT);
         int s = request.execute().statusCode();
         return s == 201 || s == 204;
     }
@@ -87,7 +87,7 @@ public class DiscordAPI
                 .requestBody(new JSONObject().put("access_token", accessToken).toString())
                 .ignoreContentType(true);
         setHeaders(request);
-        request.method(org.jsoup.Connection.Method.POST);
+        request.method(org.jsoup.Connection.Method.PUT);
         int s = request.execute().statusCode();
         return s == 201 || s == 204;
     }
