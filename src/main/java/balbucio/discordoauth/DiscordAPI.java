@@ -74,7 +74,7 @@ public class  DiscordAPI
                 .replace("{user.id}", user.getId()))
                 .requestBody(new JSONObject().put("access_token", accessToken).toString())
                 .ignoreContentType(true);
-        request.header("Authorization", "Bot " + botToken);
+        request.header("Authorization", "Bearer " + botToken);
         request.header("Content-Type", "application/json");
         request.method(org.jsoup.Connection.Method.PUT);
         int s = request.execute().statusCode();
