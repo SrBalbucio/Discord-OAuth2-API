@@ -17,6 +17,12 @@ public class CustomRequest {
     private String state;
     private List<String> scope = new ArrayList<>();
 
+    public CustomRequest(String redirectUri, String state, List<String> scope) {
+        this.redirectUri = redirectUri;
+        this.state = state;
+        this.scope = scope;
+    }
+
     public CustomRequest(String redirectUri, String state, String[] scope) {
         this.redirectUri = redirectUri;
         this.state = state;
