@@ -1,0 +1,10 @@
+balbucio\discordoauth\model\GroupChannel.class
+balbucio\discordoauth\model\Guild.class
+balbucio\discordoauth\model\Permission.class
+balbucio\discordoauth\model\CustomRequest.class
+balbucio\discordoauth\model\User.class
+balbucio\discordoauth\DiscordOAuth.class
+balbucio\discordoauth\scope\SupportedScopes.class
+balbucio\discordoauth\DiscordAPI.class
+balbucio\discordoauth\model\TokensResponse.class
+balbucio\discordoauth\model\Connection.class
