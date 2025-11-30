@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/HyperPowered-Use%20the%20official%20repository-yellow?color=%23279BF8&cacheSeconds=3600)](https://maven.hyperpowered.net/#/releases/balbucio/discordoauth/discord-oauth2-api)
+[![](https://img.shields.io/badge/HyperPowered-Use%20the%20official%20repository-yellow?color=%23279BF8&cacheSeconds=3600)](https://maven.dev.hyperpowered.net/#/releases/balbucio/discordoauth/discord-oauth2-api)
 # Discord OAuth2 API
 A small Discord OAuth2 API wrapper for Java.
 
